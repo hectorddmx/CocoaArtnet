@@ -118,7 +118,7 @@
         usleep(1000);
     }
 }
-
+/*
 -(void) iterate {
     @autoreleasepool {
         [self handleArtnetPolling];handleArtnetPolling
@@ -165,7 +165,7 @@
         }
     }
 }
-
+*/
 -(void) add: (NSString*) selector onTarget: (id) target {
     [self.generators addObject:@[target, selector]];
 }
@@ -177,7 +177,7 @@
         [self.socket sendData:data toHost:self.interfaceAddress port:AN_PORT withTimeout:-1 tag:0];
     }
 }
-
+/*
 -(void) handleArtnetPolling {
     [self.socket readDataToLength:1024 withTimeout:(1/self.framesPerSecond)/100 tag:0];
 }
@@ -185,5 +185,5 @@
 - (void)socket:(GCDAsyncSocket *)sender didReadData:(NSData *)data withTag:(long)tag {
     
 }
-
+*/
 @end

@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIColor.h>
+//#import <UIKit/UIColor.h>
 
-UIColor* hex2UIColor(NSString* hexcolor, CGFloat alpha);
+//NSColor* hex2UIColor(NSString* hexcolor, CGFloat alpha);
 NSArray* hex2RGBArray(NSString* hexcolor);
 NSString* RGB2Hex(int red, int green, int blue);
 NSString* getHexColorInFade(NSString* start, NSString* end, int frameIndex, int totalFrames);
@@ -41,8 +41,8 @@ int getIntInFade(double start, double end, double frameIndex, double totalFrames
     -(BOOL) hasColor;
     -(void) setColor:(NSString*) hexcolor;
     -(NSString*) getColor;
-    -(void) setUIColor:(UIColor*) color;
-    -(UIColor*) getUIColor;
+    //-(void) setUIColor:(UIColor*) color;
+    //-(UIColor*) getUIColor;
     -(BOOL) hasStrobe;
     -(void) setStrobe:(int) level;
     -(int) getStrobe;
