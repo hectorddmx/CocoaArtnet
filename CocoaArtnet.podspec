@@ -7,14 +7,14 @@ Pod::Spec.new do |s|
                    An implementation of the ArtNet lighing control protocol for iOS.
                    DESC
 
-  s.homepage     = "https://github.com/philchristensen/CocoaArtnet"
+  s.homepage     = "git@gitlab.videro.com:fschraer/"
 
   s.license      = 'MIT'
 
   s.author       = { "Phil Christensen" => "phil@bubblehouse.org" }
-  s.platform     = :ios
+  s.platform     = :osx
   
-  s.source       = { :git => "https://github.com/philchristensen/CocoaArtnet.git", :tag => "0.0.2" }
+  s.source       = { :git => "git@gitlab.videro.com:fschraer/CocoaArtnet.git", :tag => "0.0.2" }
   s.source_files  = 'CocoaArtnet', 'CocoaArtnet/**/*.{h,m}'
   
   s.requires_arc = true
