@@ -118,7 +118,7 @@
         usleep(1000);
     }
 }
-/*
+
 -(void) iterate {
     @autoreleasepool {
         [self handleArtnetPolling];handleArtnetPolling
@@ -165,7 +165,7 @@
         }
     }
 }
-*/
+
 -(void) add: (NSString*) selector onTarget: (id) target {
     [self.generators addObject:@[target, selector]];
 }
