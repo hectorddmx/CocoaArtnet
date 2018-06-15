@@ -121,7 +121,7 @@
 
 -(void) iterate {
     @autoreleasepool {
-        [self handleArtnetPolling];
+        //[self handleArtnetPolling];
         
         NSMutableArray* mergedFrame = [self createFrame];
         for(NSArray* pair in self.generators){
