@@ -13,8 +13,8 @@
 @implementation ANDmxPacket
 @synthesize frame;
 
--(ANPacket*) initWithFrame: (NSArray*) aFrame {
-    self = [super initWithUniverse:0 physical:0];
+-(ANPacket*) initWithFrame: (NSArray*) aFrame andUniverse: (NSNumber*) aUniverse {
+    self = [super initWithUniverse:aUniverse physical:aUniverse];
     if([aFrame count] != 512){
         @throw [NSException
                 exceptionWithName:@"InvalidDMXException"
