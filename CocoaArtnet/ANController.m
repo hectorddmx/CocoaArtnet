@@ -170,7 +170,7 @@
     [self.generators addObject:@[target, selector]];
 }
 
--(void) send: (NSArray*) frame to: (NSNumber*) universe{
+-(void) send: (NSArray*) frame to: (int) universe{
     @autoreleasepool {
         ANDmxPacket* packet = [[ANDmxPacket alloc] initWithFrame:frame andUniverse:universe];
         NSData* data = [packet encode];

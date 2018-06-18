@@ -48,6 +48,6 @@ do { \
     -(void) resume;
     -(void) iterate;
     -(void) add: (NSString*) selector onTarget: (id) target;
-    -(void) send: (NSArray*) frame;
+    -(void) send: (NSArray*) frame to: (int) universe;
     -(void) handleArtnetPolling;
 @end

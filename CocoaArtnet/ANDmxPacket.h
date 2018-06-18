@@ -11,6 +11,6 @@
 @interface ANDmxPacket : ANPacket
     @property NSArray* frame;
 
-    -(ANDmxPacket*) initWithFrame: (NSArray*) aFrame;
+    -(ANDmxPacket*) initWithFrame: (NSArray*) aFrame andUniverse: (int) aUniverse;
     -(NSData*) encode;
 @end

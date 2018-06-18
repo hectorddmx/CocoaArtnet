@@ -13,7 +13,7 @@
 @implementation ANDmxPacket
 @synthesize frame;
 
--(ANPacket*) initWithFrame: (NSArray*) aFrame andUniverse: (NSNumber*) aUniverse {
+-(ANPacket*) initWithFrame: (NSArray*) aFrame andUniverse: (int) aUniverse {
     self = [super initWithUniverse:aUniverse physical:aUniverse];
     if([aFrame count] != 512){
         @throw [NSException
