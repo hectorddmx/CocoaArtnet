@@ -26,6 +26,7 @@ do { \
 
     @property GCDAsyncUdpSocket* socket;
     @property NSMutableArray* latestFrame;
+    @property int universe;
     @property NSMutableArray* generators;
     @property NSThread* thread;
 
@@ -37,7 +38,7 @@ do { \
 
     -(ANController*) initWithAddress: (NSString*) address andBPM:(float) bpm andBarLength:(int) beats andFPS: (float) fps;
     -(ANController*) initWithAddress: (NSString*) address andBPM:(float) bpm andBarLength:(int) beats;
-    -(ANController*) initWithAddress: (NSString*) address andBPM:(float) bpm;
+    -(ANController*) initWithAddress: (NSString*) address andUniverse: (int) universe andBPM:(float) bpm;
 
     -(NSMutableArray*) createFrame;
     -(void) start;
@@ -48,6 +49,6 @@ do { \
     -(void) resume;
     -(void) iterate;
     -(void) add: (NSString*) selector onTarget: (id) target;
-    -(void) send: (NSArray*) frame to: (int) universe;
+    -(void) send: (NSArray*) frame;
     -(void) handleArtnetPolling;
 @end

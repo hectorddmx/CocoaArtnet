@@ -15,6 +15,7 @@
 @synthesize framesPerSecond;
 @synthesize framesPerBeat;
 @synthesize latestFrame;
+@synthesize universe;
 @synthesize generators;
 @synthesize socket;
 @synthesize thread;
@@ -39,10 +40,11 @@
     return self;
 }
 
--(ANController*) initWithAddress: (NSString*) address andBPM:(float) bpm {
+-(ANController*) initWithAddress: (NSString*) address andUniverse:(int) universe andBPM:(float) bpm {
     self = [super init];
     [self setupWithAddress:address andBPM:bpm andBarLength:4 andFPS:44.0];
     self.latestFrame = [self createFrame];
+    self.universe = universe;
     self.generators = [[NSMutableArray alloc] init];
     return self;
 }
@@ -170,9 +172,9 @@
     [self.generators addObject:@[target, selector]];
 }
 
--(void) send: (NSArray*) frame to: (int) universe{
+-(void) send: (NSArray*) frame{
     @autoreleasepool {
-        ANDmxPacket* packet = [[ANDmxPacket alloc] initWithFrame:frame andUniverse:universe];
+        ANDmxPacket* packet = [[ANDmxPacket alloc] initWithFrame:frame andUniverse:self.universe];
         NSData* data = [packet encode];
         [self.socket sendData:data toHost:self.interfaceAddress port:AN_PORT withTimeout:-1 tag:0];
     }
